@@ -1,0 +1,56 @@
+/* Animaciones de agregado/eliminado */
+.agregado {
+  background-color: #d4edda !important; /* Verde claro */
+  color: #155724 !important;
+  animation: fade 1s ease-in-out;
+}
+
+.eliminado {
+  background-color: #f8d7da !important; /* Rojo claro */
+  color: #721c24 !important;
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+/* HERO con imagen de fondo */
+.hero {
+  position: relative;
+  height: 50vh; /* ajusta altura del hero */
+  background-image: url('../imagenes/6.jpg'); /* tu imagen de hero */
+  background-size: cover; /* hace que la imagen cubra todo el contenedor */
+  background-position: center center; /* centra la imagen */
+  background-repeat: no-repeat; /* evita repetición */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* overlay oscuro */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2; /* asegura que el texto esté por encima del overlay */
+}
+
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Compensación si hay navbar fijo */
+#productos {
+  scroll-margin-top: 70px;
+}
