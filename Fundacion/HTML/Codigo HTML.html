@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fundación Vida Libre — Demo</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS interno (puedes pasarlo a un archivo separado) -->
+  <style>
+    :root {
+      --primary: #1db954; /* Verde esperanza */
+      --dark: #111;
+      --light: #f5f5f5;
+      --gray: #444;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+    }
+    header {
+      background: #000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--light);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--primary); }
+    .cta {
+      background: var(--primary);
+      color: #000 !important;
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 4rem 2rem;
+      background: linear-gradient(to right, #000, #111);
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+    .hero-buttons a {
+      margin-right: 1rem;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    }
+
+    /* SECCIONES */
+    section {
+      padding: 3rem 2rem;
+    }
+    section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .section-desc { margin-bottom: 2rem; color: #ccc; }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card img { width: 100%; border-radius: 10px; margin-bottom: 1rem; }
+
+    /* CONTACTO */
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      padding: 2rem;
+      background: #1a1a1a;
+      border-radius: 12px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 6px;
+      background: #333;
+      color: #fff;
+    }
+    .contact-form button {
+      background: var(--primary);
+      border: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact-form button:hover { background: #17a744; }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #000;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Vida Libre</div>
+    <nav>
+      <a href="#quienes">Quiénes somos</a>
+      <a href="#programas">Programas</a>
+      <a href="#historias">Historias</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#donar" class="cta">Apóyanos</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1>Un futuro libre de adicciones</h1>
+        <p>En Fundación Vida Libre trabajamos para prevenir, educar y apoyar a personas y familias afectadas por las drogas. Nuestra meta: comunidades más fuertes y seguras.</p>
+        <div class="hero-buttons">
+          <a href="#donar" class="cta">Donar ahora</a>
+          <a href="#programas">Ver programas</a>
+        </div>
+      </div>
+      <div>
+        <img src="https://picsum.photos/id/1011/600/400" alt="Fundación contra las drogas">
+      </div>
+    </section>
+
+    <!-- QUIENES SOMOS -->
+    <section id="quienes">
+      <h2>Quiénes somos</h2>
+      <p class="section-desc">Somos un grupo de personas que creemos en la fuerza de un abrazo, en el valor de escuchar y en las segundas oportunidades.
+
+Sabemos lo difícil que puede ser enfrentar las adicciones, no solo para quien las vive, sino también para sus familias. Por eso caminamos a tu lado con empatía, respeto y esperanza, brindando apoyo real y recordando siempre que nadie está solo en este camino.
+
+Nuestro sueño es sencillo: que cada joven y cada familia descubra que sí existe un futuro diferente, una vida con libertad y dignidad..</p>
+    </section>
+
+    <!-- PROGRAMAS -->
+    <section id="programas">
+      <h2>Programas clave</h2>
+      <div class="grid-3">
+        <div class="card">
+          <img src="https://picsum.photos/id/1005/400/250" alt="Prevención escolar">
+          <h3>Prevención escolar</h3>
+          <p>Charlas, talleres y actividades con jóvenes para fortalecer la autoestima y evitar el consumo.</p>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/id/1025/400/250" alt="Apoyo familiar">
+          <h3>Apoyo familiar</h3>
+          <p>Acompañamiento a padres y familiares para detectar señales y dar herramientas de ayuda.</p>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/id/1041/400/250" alt="Rehabilitación">
+          <h3>Rehabilitación</h3>
+          <p>Red de centros y especialistas comprometidos con la recuperación y la reinserción social.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORIAS -->
+    <section id="historias">
+      <h2>Historias de vida</h2>
+      <p class="section-desc">Testimonios de personas que han logrado superar la adicción y reconstruir su futuro.</p>
+      <div class="grid-3">
+        <div class="card"><p>"Hoy vivo con esperanza y lejos de las drogas gracias al apoyo recibido."</p></div>
+        <div class="card"><p>"Mi familia encontró orientación y gracias a la ayuda recibida en Vida Libre ahora puedo ser libre y sin dependecias."</p></div>
+        <div class="card"><p>"Nunca pensé que podría recuperar mi vida, pero gracias a vida libre y a mi familia lo logre."</p></div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="contact-box">
+        <div>
+          <p>📍 Estado de México, México<br>✉️ contacto@vidalibre.org<br>📞 +52 55 9876 5432</p>
+        </div>
+        <form class="contact-form">
+          <input type="text" name="nombre" placeholder="Nombre" required>
+          <input type="email" name="email" placeholder="Correo electrónico" required>
+          <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Fundación Vida Libre • © (Luis Eguiarte, Santiago Gomez, Rodrigo Bustamante, Alejandro Guitierrez, Rogelio Romero) <span id="year"></span> · Todos los derechos reservados
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
